@@ -120,38 +120,54 @@
 		<p>We present many films from various main categories, let’s choose and</p>
 
 		<div class="cases__wrapper">
-			<a href="#" class="cases__item">
+			<a href="#" class="cases__item"  data-img="https://picsum.photos/270/220">
+				<img class="hover-image" src="" alt="Imagem Flutuante">
 				<strong>Best Retail Site</strong>
 				<div>
 					<h3>Zorro Ecommerce</h3>
 					<span>May 2023</span>
 					<p>Branding & Design</p>
 				</div>
-				<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg class="seta" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1.9383 0H15.2487V12.4051H12.8286V3.85034L1.9383 14L0.227051 12.4051L11.1174 2.25548H1.9383V0Z" fill="#282B37"/>
 				</svg>
+				
+				<svg class="seta-hover" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.9383 0H15.2487V12.4051H12.8286V3.85034L1.9383 14L0.227051 12.4051L11.1174 2.25548H1.9383V0Z" fill="#8E37B7"/>
+				</svg>
 			</a>
-			<a href="#" class="cases__item">
+			<a href="#" class="cases__item" data-img="https://picsum.photos/270/220">
+				<img class="hover-image" src="" alt="Imagem Flutuante">
 				<strong>Best Retail Site</strong>
 				<article>
 					<h3>Zorro Ecommerce</h3>
 					<span>May 2023</span>
 					<p>Branding & Design</p>
 				</article>
-				<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg class="seta" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1.9383 0H15.2487V12.4051H12.8286V3.85034L1.9383 14L0.227051 12.4051L11.1174 2.25548H1.9383V0Z" fill="#282B37"/>
 				</svg>
+				
+				<svg class="seta-hover" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.9383 0H15.2487V12.4051H12.8286V3.85034L1.9383 14L0.227051 12.4051L11.1174 2.25548H1.9383V0Z" fill="#8E37B7"/>
+				</svg>
 			</a>
-			<a href="#" class="cases__item">
+			<a href="#" class="cases__item"  data-img="https://picsum.photos/270/220">
+				<img class="hover-image" src="" alt="Imagem Flutuante">
 				<strong>Best Retail Site</strong>
 				<div>
 					<h3>Zorro Ecommerce</h3>
 					<span>May 2023</span>
 					<p>Branding & Design</p>
 				</div>
-				<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg class="seta"  width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1.9383 0H15.2487V12.4051H12.8286V3.85034L1.9383 14L0.227051 12.4051L11.1174 2.25548H1.9383V0Z" fill="#282B37"/>
 				</svg>
+
+				<svg class="seta-hover" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.9383 0H15.2487V12.4051H12.8286V3.85034L1.9383 14L0.227051 12.4051L11.1174 2.25548H1.9383V0Z" fill="#8E37B7"/>
+				</svg>
+					
 			</a>
 		</div>
 	</div>
@@ -159,5 +175,47 @@
    <script type="module" src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
    <script type="module" src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
    <script type="module" src="/main.js"></script>
+
+   <script>
+	   const items = document.querySelectorAll(".cases__item");
+
+		items.forEach((item) => {
+			const img = item.dataset.img;
+			const hoverImage = item.querySelector(".hover-image");
+
+			item.addEventListener('mouseover', () => {
+				hoverImage.setAttribute('src', img);
+			});
+
+			item.addEventListener('mouseout', () => {
+				hoverImage.setAttribute('src', '');
+			});
+
+
+			item.addEventListener('mousemove', (e) => {
+		if (hoverImage) {
+			const x = e.clientX + 10; // Ajuste de posição para evitar sobreposição com o cursor
+			const y = e.clientY + 10; // Ajuste de posição para evitar sobreposição com o cursor
+			hoverImage.style.left = x + 'px';
+			hoverImage.style.top = y + 'px';
+		}
+	});
+		});
+
+
+   </script>
+     <style>
+
+        .hover-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+        }
+
+        .cases__item:hover .hover-image {
+            display: block;
+        }
+    </style>
   </body>
 </html>

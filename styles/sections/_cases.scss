@@ -30,6 +30,21 @@
         justify-content: space-between;
         border-bottom: 1px solid #5A5D67;
         padding-bottom: 3.9rem;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: translate(10px); 
+            .seta {
+                display: none;
+            }
+            .seta-hover {
+                display: block;
+            }
+
+            strong {
+                color: var(--color-primary);
+            }
+        }
 
         div {
             display: flex;
@@ -60,6 +75,11 @@
             font-family: 400;
             color: var(--colors-gray-800);
         }
+
+       .seta-hover {
+        display: none;
+       }
       
     }
+
 }
