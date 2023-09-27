@@ -1,0 +1,56 @@
+.alert {
+    border-radius: 5px;
+    height: 40px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    // Reset overflow from parent .card
+    overflow: hidden;
+    max-width: 200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 0 20px;
+    right: 20px;
+    top: 20px;
+
+    &--danger {
+        background-color: var(--danger);
+        color: var(--color-white);
+    }
+
+    // Add a close button
+    button.close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: inherit;
+    }
+
+    // Add a dismissible icon
+    .alert-dismissible {
+        padding-right: 4rem;
+    }
+
+    // Add a dismissible icon & extra padding to account for the close button
+}
+
+//transition
+.alert {
+    transition: all 0.3s ease-in-out;
+}
+
+//animation
+.alert {
+    animation: alert 0.3s ease-in-out;
+}
+
+@keyframes alert {
+    0% {
+        transform: translateX(+100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

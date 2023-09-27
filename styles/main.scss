@@ -1,0 +1,41 @@
+// Importe os estilos base
+@import 'base/variables';
+@import 'base/flex';
+@import 'base/grid';
+@import 'base/reset';
+@import 'base/mixins';
+@import 'base/functions';
+@import 'base/typography';
+
+@import 'components/header';
+@import 'components/hero';
+@import 'components/buttons';
+@import 'components/title';
+
+@import 'sections/features';
+@import 'sections/services';
+@import 'sections/cases';
+
+
+
+  
+  .carousel-cell {
+    width: 650px;
+    height: 300px;
+    margin-right: 10px;
+ 
+  }
+  
+  .carousel.is-fullscreen .carousel-cell {
+    height: 100%;
+  }
+  
+  .carousel-cell-image {
+    display: block;
+    max-height: 100%;
+  }
+  
+  .carousel.is-fullscreen .carousel-cell-image {
+    max-width: 100%;
+  }
+  

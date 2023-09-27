@@ -1,0 +1,7 @@
+.title-with-degrade {
+    background: linear-gradient(to right, #8E37B7, #3B114F); /* Define o degradê de fundo */
+    -webkit-background-clip: text; /* Define a máscara do texto como o gradiente */
+    background-clip: text; /* Define a máscara do texto como o gradiente (para navegadores que não suportam o prefixo -webkit-) */
+    color: transparent; /* Torna o texto transparente para revelar o degradê de fundo */
+    display: inline-block; /* Certifica-se de que o degradê se aplica apenas ao texto, não ao bloco inteiro */
+}

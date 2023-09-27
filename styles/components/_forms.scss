@@ -1,0 +1,22 @@
+.form{
+    &__login {
+    background: var(--color-primary);
+    border-radius: 10px;
+    height: 244px;
+    max-width: 100%;
+    width: 100%;
+
+
+        @media(min-width: 400px){
+            border-radius: 0 0 10px 10px;
+            height:180px;
+            max-width: 358px;
+            width: 100%;
+
+            position: relative;
+
+        }
+    }
+
+
+}

@@ -1,0 +1,29 @@
+.input {
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+    padding-left: 10px;
+    box-shadow: 0 0 15px #ccc inset;
+    font-family: sans-serif;
+    background: var(--color-white);
+
+    &:focus {
+        border:  2px solid var(--colors-gray-200) ;
+        background: var(--color-white);
+    }
+
+    &:active {
+        border:  2px solid  var(--colors-gray-200) ;
+        background: var(--color-white);
+    }
+
+    &--smal {
+        @media(min-width: 400px) {
+            .input {
+                width: 280px;
+            }
+        }
+    }
+
+
+}

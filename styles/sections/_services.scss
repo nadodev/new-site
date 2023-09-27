@@ -1,0 +1,65 @@
+.services {
+    background-color: #eee;
+    padding: 53px 0;
+    z-index: 4;
+    position: relative;
+    h2 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-bottom: 2.4rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        color: var(--colors-gray-800);
+        font-weight: 400;
+        margin-bottom: 4.5rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 3.2rem;
+    }
+
+    &__item {
+        position: relative;
+        img {
+            margin-bottom: 1.6rem;
+        }
+        h3 {
+            font-size: 2.6rem;
+            max-width: 27.0rem;
+            width: 100%;
+            color: var(--colors-gray-800);
+            font-weight: 600;
+            margin-bottom: 1.6rem;
+            line-height: 120%;
+          
+            &::before {
+                content: '';
+                position: absolute;
+                width: 33px;
+                height: 2px;
+                bottom: -20px;
+                background-color: var(--color-primary);
+            }
+        }
+    }
+
+    &__action {
+        margin-top: 5.3rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        button {
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+    }
+}

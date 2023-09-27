@@ -1,0 +1,33 @@
+.btn {
+    border: none;
+    font-size: 1.6rem;
+    color: var(--white);
+    transition-duration: 500ms;
+    width: 19.4rem;
+    height: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--primary {
+        background: var(--color-primary);
+    }
+
+    &--outiline {
+        background-color: transparent;
+     
+        &-primary {
+            border: 1px solid var(--color-primary);
+            color: var(--color-primary);;
+        }
+
+        &-white {
+            border: 1px solid var(--white);
+            color: var(--white);
+        }
+    }
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+}
