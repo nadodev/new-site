@@ -1,0 +1,11 @@
+.footer {
+  background: linear-gradient(
+    to right,
+    #8e37b7,
+    #3b114f
+  ); /* Define o degradê de fundo */
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

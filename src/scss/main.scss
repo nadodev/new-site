@@ -1,0 +1,15 @@
+// Importe os estilos base
+@import "base/flex";
+@import "base/grid";
+@import "base/reset";
+
+@import "components/header";
+@import "components/hero";
+@import "components/buttons";
+@import "components/title";
+
+@import "sections/features";
+@import "sections/services";
+@import "sections/cases";
+@import "sections/testimonials";
+@import "sections/footer";

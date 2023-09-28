@@ -121,7 +121,6 @@
 
 		<div class="cases__wrapper">
 			<a href="#" class="cases__item"  data-img="https://picsum.photos/270/220">
-				<img class="hover-image" src="" alt="Imagem Flutuante">
 				<strong>Best Retail Site</strong>
 				<div>
 					<h3>Zorro Ecommerce</h3>
@@ -137,7 +136,6 @@
 				</svg>
 			</a>
 			<a href="#" class="cases__item" data-img="https://picsum.photos/270/220">
-				<img class="hover-image" src="" alt="Imagem Flutuante">
 				<strong>Best Retail Site</strong>
 				<article>
 					<h3>Zorro Ecommerce</h3>
@@ -153,7 +151,6 @@
 				</svg>
 			</a>
 			<a href="#" class="cases__item"  data-img="https://picsum.photos/270/220">
-				<img class="hover-image" src="" alt="Imagem Flutuante">
 				<strong>Best Retail Site</strong>
 				<div>
 					<h3>Zorro Ecommerce</h3>
@@ -172,50 +169,40 @@
 		</div>
 	</div>
    </section>
-   <script type="module" src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
-   <script type="module" src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
-   <script type="module" src="/main.js"></script>
+   <section class="testimonials">
+	<div class="container">
+		<h2 class="title-with-degrade">TESTEMUNHOS</h2>
+		<p>How they respond to the results of the work we do for them, let’s we know</p>
+		<div class="testimonials__wrapper">
+			<div class="testimonials__item">
+				<div class="testimonials__item-top">
+					<h3>Ujang Slebew</h3>
+					<span>Cafe Owner</span>
+				</div>
+				<p>Increase product sales and the amount of cash that comes in for further development</p>
+			</div>
 
-   <script>
-	   const items = document.querySelectorAll(".cases__item");
+			<div class="testimonials__item">
+				<div class="testimonials__item-top">
+					<h3>Ujang Slebew</h3>
+					<span>Cafe Owner</span>
+				</div>
+				<p>Increase product sales and the amount of cash that comes in for further development</p>
+			</div>
+			<div class="testimonials__item">
+				<div class="testimonials__item-top">
+					<h3>Ujang Slebew</h3>
+					<span>Cafe Owner</span>
+				</div>
+				<p>Increase product sales and the amount of cash that comes in for further development</p>
+			</div>
+		</div>
+	</div>
+   </section>
+   <footer class="footer">
+	<p>Todos os direitos reservados a Leonardo Geja &copy;</p>
+   </footer>
+   <script type="module" src="/dist/bundle.js"></script>
 
-		items.forEach((item) => {
-			const img = item.dataset.img;
-			const hoverImage = item.querySelector(".hover-image");
-
-			item.addEventListener('mouseover', () => {
-				hoverImage.setAttribute('src', img);
-			});
-
-			item.addEventListener('mouseout', () => {
-				hoverImage.setAttribute('src', '');
-			});
-
-
-			item.addEventListener('mousemove', (e) => {
-		if (hoverImage) {
-			const x = e.clientX + 10; // Ajuste de posição para evitar sobreposição com o cursor
-			const y = e.clientY + 10; // Ajuste de posição para evitar sobreposição com o cursor
-			hoverImage.style.left = x + 'px';
-			hoverImage.style.top = y + 'px';
-		}
-	});
-		});
-
-
-   </script>
-     <style>
-
-        .hover-image {
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: none;
-        }
-
-        .cases__item:hover .hover-image {
-            display: block;
-        }
-    </style>
   </body>
 </html>
