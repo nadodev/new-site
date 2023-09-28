@@ -14,15 +14,6 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: 8192, // Se a imagem for menor que 8 KB, ela será incorporada como um URL de dados
-              name: "images/[name].[ext]", // Diretório de saída para imagens
-            },
-          },
-        ],
       },
     ],
   },

@@ -1,0 +1,66 @@
+.hero {
+  display: flex;
+  max-height: 644px;
+  height: 100%;
+  padding: 108px 0;
+  background-color: var(--colors-gray-900);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/img/bg-header.svg");
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  &__text-leonardo {
+    position: relative;
+    width: 390px;
+    height: 103px;
+    background-image: url("../assets/img/bg-text-leonardo.svg");
+    background-repeat: no-repeat;
+    padding: 10px;
+    display: inline-block;
+    font-size: 74px;
+  }
+
+  .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    position: relative;
+    z-index: 2;
+    span {
+      margin-bottom: 3rem;
+      display: inline-block;
+    }
+    h1 {
+      font-size: 7.2rem;
+      line-height: 110%;
+      font-weight: 600;
+      margin-bottom: 1.6rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 150%;
+      width: 100%;
+      color: var(--colors-gray-500);
+      margin-bottom: 6.4rem;
+    }
+  }
+  &__actions {
+    display: flex;
+    gap: 4rem;
+  }
+}
